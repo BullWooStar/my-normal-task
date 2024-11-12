@@ -19,7 +19,10 @@
  * 언어는 자바스크립트나 타입스크립트 모두 무방합니다.
  */
 
-function moveSelectedItemsLeft(data: number[], selected: number[]): number[] {
+export function moveSelectedItemsLeft(
+  data: number[],
+  selected: number[]
+): number[] {
   const selectedIndexes = selected.map((value) => data.indexOf(value));
 
   selectedIndexes.forEach((index) => {
@@ -37,4 +40,4 @@ const selected = [1, 3, 5];
 
 const result = moveSelectedItemsLeft(data, selected);
 
-console.log(`result it: ${result}`);
+console.log(`result is: ${result}`);

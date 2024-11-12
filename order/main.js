@@ -1,3 +1,4 @@
+"use strict";
 /**
  * selected 배열에 포함된 data 배열의 원소들을 왼쪽으로 한 칸씩 옴기는 콘솔 프로그램을 작성해주세요.
  *
@@ -18,6 +19,8 @@
  *
  * 언어는 자바스크립트나 타입스크립트 모두 무방합니다.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.moveSelectedItemsLeft = moveSelectedItemsLeft;
 function moveSelectedItemsLeft(data, selected) {
     var selectedIndexes = selected.map(function (value) { return data.indexOf(value); });
     selectedIndexes.forEach(function (index) {
@@ -31,4 +34,4 @@ function moveSelectedItemsLeft(data, selected) {
 var data = [1, 2, 3, 4, 5];
 var selected = [1, 3, 5];
 var result = moveSelectedItemsLeft(data, selected);
-console.log("result it: ".concat(result));
+console.log("result is: ".concat(result));
