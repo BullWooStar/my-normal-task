@@ -34,6 +34,7 @@
  * 언어는 자바스크립트나 타입스크립트 모두 무방합니다.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.findMBTI = findMBTI;
 var questions = [
     {
         disagree: "E",

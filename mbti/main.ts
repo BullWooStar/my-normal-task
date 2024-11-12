@@ -89,7 +89,7 @@ const userResponses: string[] = [
   "메우 그렇다",
 ];
 
-function findMBTI(responses: string[]): string {
+export function findMBTI(responses: string[]): string {
   const scores: Record<string, number> = {
     E: 0,
     I: 0,
