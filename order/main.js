@@ -18,23 +18,17 @@
  *
  * 언어는 자바스크립트나 타입스크립트 모두 무방합니다.
  */
-
-function moveSelectedItemsLeft(data: number[], selected: number[]): number[] {
-  const selectedIndexes = selected.map((value) => data.indexOf(value));
-
-  selectedIndexes.forEach((index) => {
-    if (index > 0) {
-      const removed = data.splice(index, 1)[0];
-      data.splice(index - 1, 0, removed);
-    }
-  });
-
-  return data;
+function moveSelectedItemsLeft(data, selected) {
+    var selectedIndexes = selected.map(function (value) { return data.indexOf(value); });
+    selectedIndexes.forEach(function (index) {
+        if (index > 0) {
+            var removed = data.splice(index, 1)[0];
+            data.splice(index - 1, 0, removed);
+        }
+    });
+    return data;
 }
-
-const data = [1, 2, 3, 4, 5];
-const selected = [1, 3, 5];
-
-const result = moveSelectedItemsLeft(data, selected);
-
-console.log(`result it: ${result}`);
+var data = [1, 2, 3, 4, 5];
+var selected = [1, 3, 5];
+var result = moveSelectedItemsLeft(data, selected);
+console.log("result it: ".concat(result));
